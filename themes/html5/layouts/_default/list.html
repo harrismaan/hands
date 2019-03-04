@@ -1,8 +1,0 @@
-{{ define "main" }}
-		<main class="list">
-{{ range (where .Paginator.Pages "Date" "<=" now) }}
-{{ partial "article" (dict "article" . "mode" (default "summary" $.Site.Params.listmode)) }}
-{{ end }}
-{{ partial "pagination" . }}
-		</main>
-{{ end }}
